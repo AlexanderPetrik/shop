@@ -1,0 +1,13 @@
+@import 'bootstrap';
+
+.flex {
+  display: flex;
+  &.revers {
+    flex-direction: row-reverse;
+  }
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+}
