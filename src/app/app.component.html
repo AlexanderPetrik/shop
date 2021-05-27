@@ -1,8 +1,17 @@
 <main>
-  <router-outlet></router-outlet>
   <h1>Hello Shop!</h1>
   <div class="flex revers">
     <input class="form-control" type="text">
     <button class="btn btn-primary">Knopka</button>
   </div>
+
+  <div class="navbar">
+    <nav class="flex">
+      <div class="nav-item"><a routerLink='/' routerLinkActive='active' class="nav-link">Home</a></div>
+      <div class="nav-item"><a routerLink='/add-product' routerLinkActive='active' class="nav-link">Add product</a></div>
+    </nav>
+  </div>
+
+  <router-outlet></router-outlet>
+
 </main>
