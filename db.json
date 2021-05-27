@@ -1,1 +1,11 @@
-{}
+{
+  "products":[{
+    "title": "title",
+    "description": "description",
+    "price": 813,
+    "qty": "qty",
+    "discount": 3,
+    "currency": "USD",
+    "infoFields":[]
+  }]
+}
