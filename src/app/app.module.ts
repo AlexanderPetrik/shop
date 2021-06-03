@@ -4,10 +4,12 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { ValidateMessagesComponent } from './modules/validate-messages/validate-messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ValidateMessagesComponent,
   ],
   imports: [
     FormsModule,
