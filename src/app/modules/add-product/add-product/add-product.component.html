@@ -3,22 +3,22 @@
     <li>
       <label for="title" class="form-label">Title</label>
       <input  id="title" formControlName="title"  type="text" placeholder="Title" class="form-control">
-      <!-- <app-validate-messages [control]="addProductForm.controls.title"></app-validate-messages> -->
+      <app-validate-messages [control]="addProductForm.controls.title"></app-validate-messages>
     </li>
     <li>
       <label for="description" class="form-label">Description</label>
       <input id="description" formControlName="description" type="text" placeholder="Description" class="form-control">
-      <!-- <app-validate-messages [control]="addProductForm.controls.description"></app-validate-messages> -->
+      <app-validate-messages [control]="addProductForm.controls.description"></app-validate-messages>
     </li>
     <li>
       <label for="price" class="form-label">Price</label>
       <input id="price" formControlName="price" type="number" placeholder="Price" class="form-control">
-      <!-- <app-validate-messages [control]="addProductForm.controls.price"></app-validate-messages> -->
+      <app-validate-messages [control]="addProductForm.controls.price"></app-validate-messages>
     </li>
     <li>
       <label for="qty" class="form-label">Qty</label>
       <input id="qty" formControlName="qty" type="number" placeholder="Qty" class="form-control">
-      <!-- <app-validate-messages [control]="addProductForm.controls.qty"></app-validate-messages> -->
+      <app-validate-messages [control]="addProductForm.controls.qty"></app-validate-messages>
     </li>
     <li>
       <label for="discount"  class="form-label">Discount</label>
@@ -27,9 +27,13 @@
     <li>
       <label for="currency" class="form-label">Currency</label>
       <select id="currency" formControlName="currency" class="form-select">
-        <option>Select currency</option>
+        <option *ngFor="let currency of currencies" [value]="currency.code">{{currency.title}}</option>
       </select>
     </li>
   </ul>
   <button (click)="addProduct()" type="button" class="btn btn-success">Add</button>
 </form>
+<!-- Pipe добавляет значек к валюте по коду валюты (USD/EUR...) -->
+<!-- <div *ngFor="let currency of currencies">
+  {{10|currency:currency.code}}
+</div> -->

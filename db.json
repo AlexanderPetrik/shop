@@ -1,11 +1,14 @@
 {
-  "products":[{
-    "title": "title",
-    "description": "description",
-    "price": 813,
-    "qty": "qty",
-    "discount": 3,
-    "currency": "USD",
-    "infoFields":[]
-  }]
+  "products": [
+    {
+      "title": "звуковая карта",
+      "description": "крутая",
+      "price": 1700,
+      "qty": 3,
+      "discount": 5,
+      "currency": "USD",
+      "infoFields": null,
+      "id": 1
+    }
+  ]
 }
