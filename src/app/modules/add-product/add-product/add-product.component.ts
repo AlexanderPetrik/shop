@@ -25,9 +25,13 @@ export class AddProductComponent implements OnInit {
   // Сделать проверку перед сохранение, что форма валидна и сохранить если валидна иначе показать все ошибки.
 
   addProduct() {
-    this.productApiService
+    if(this.addProductForm.invalid) {
+      Object.values(this.addProductForm.controls).forEach(control => control.markAsTouched());
+    } else {
+      this.productApiService
       .addProduct(this.addProductForm.value)
       .subscribe((product) => console.log(product));
+    }
   }
 
 
