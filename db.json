@@ -9,6 +9,26 @@
       "currency": "USD",
       "infoFields": null,
       "id": 1
+    },
+    {
+      "title": "Beer",
+      "description": "Cool",
+      "price": 25,
+      "qty": 6,
+      "discount": 5,
+      "currency": "USD",
+      "infoFields": null,
+      "id": 2
+    },
+    {
+      "title": "Tort",
+      "description": "Yammmy",
+      "price": 250,
+      "qty": 2,
+      "discount": 95,
+      "currency": "EUR",
+      "infoFields": null,
+      "id": 3
     }
   ]
 }

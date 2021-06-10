@@ -1,0 +1,21 @@
+.cart {
+  z-index: 1000;
+  position: relative;
+  &:hover .products-list {
+    display: block;
+  }
+}
+
+.products-list {
+  position: absolute;
+  top:100%;
+  right: 0;
+  width: 400px;
+  display: none;
+  background-color: bisque;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+  border-radius: 5px;
+  li {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,14 @@
+<h2>Products list</h2>
+
+<div *ngFor="let product of products">
+  <h5>Title: {{product.title}}</h5>
+  <h5>Description: {{product.description}}</h5>
+  <h5>Price:
+    <span *ngIf="product.discount" class="strike">{{product.price | currency:product.currency}}</span>&nbsp;
+    <span>{{(product.discount ? product.price - (product.price / 100 * product.discount) : product.price) | currency:product.currency}}</span>
+  </h5>
+  <h5>Qty: {{product.qty}}</h5>
+  <h5>Discount: {{product.discount}}%</h5>
+  <!-- <h5>Currency: {{product.currency}}</h5> -->
+  <hr>
+</div>
