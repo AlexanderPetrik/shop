@@ -11,3 +11,10 @@ main {
   width: 70%;
   margin: 0 auto;
 }
+
+.nav-item, .link-primary {
+  text-decoration: none;
+  .active {
+    text-decoration: underline;
+  }
+}

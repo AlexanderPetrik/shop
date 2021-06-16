@@ -1,0 +1,16 @@
+<div *ngIf="product" class="product">
+  <div class="image">
+    <img src="/assets/photos/{{product.image || 'no-image.jpg'}}" alt="">
+  </div>
+  <div class="info">
+    <h5>Title: <a class="link-primary" [routerLink]="['/product', product.id]" routerLinkActive="router-link-active" >{{product.title}}</a></h5>
+    <h5>Description: {{product.description}}</h5>
+    <h5>Price:
+      <span *ngIf="product.discount" class="strike">{{product.price | currency:product.currency}}</span>&nbsp;
+      <span>{{(product.discount ? product.price - (product.price / 100 * product.discount) : product.price) | currency:product.currency}}</span>
+    </h5>
+    <h5>Qty: {{product.qty}}</h5>
+    <h5>Discount: {{product.discount}}%</h5>
+    <button *ngIf="isEdit" (click)="editProduct(product)" type="button" class="btn btn-warning">Edit</button>
+  </div>
+</div>

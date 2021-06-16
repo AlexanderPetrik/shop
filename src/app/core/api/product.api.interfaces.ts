@@ -3,6 +3,7 @@ export interface Product {
   description: string;
   price: number;
   qty: number;
+  image?: string;
   discount?: number;
   currency?: string;
   infoFields?: any[];

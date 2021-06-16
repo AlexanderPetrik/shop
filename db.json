@@ -8,7 +8,8 @@
       "discount": 5,
       "currency": "USD",
       "infoFields": null,
-      "id": 1
+      "id": 1,
+      "image": "sound-card.jpg"
     },
     {
       "title": "Beer",
@@ -18,7 +19,8 @@
       "discount": 5,
       "currency": "USD",
       "infoFields": null,
-      "id": 2
+      "id": 2,
+      "image": "beer.jpg"
     },
     {
       "title": "Tort",
@@ -28,7 +30,19 @@
       "discount": 95,
       "currency": "EUR",
       "infoFields": null,
-      "id": 3
+      "id": 3,
+      "image": "tort.jpg"
+    },
+    {
+      "image": "",
+      "title": "Processor",
+      "description": "Ryzen 5",
+      "price": 500,
+      "qty": 4,
+      "discount": 7,
+      "currency": "USD",
+      "infoFields": null,
+      "id": 4
     }
   ]
 }

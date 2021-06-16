@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../core/api/product.api.interfaces';
 import { ProductApiService } from '../../../core/api/product.api.service';
 
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',

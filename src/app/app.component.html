@@ -7,7 +7,7 @@
 
   <div class="navbar">
     <nav class="flex">
-      <div class="nav-item"><a routerLink='/' routerLinkActive='active' class="nav-link">Home</a></div>
+      <div class="nav-item"><a routerLink='/' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a></div>
       <div class="nav-item"><a routerLink='/add-product' routerLinkActive='active' class="nav-link">Add product</a></div>
       <div class="nav-item"><a routerLink='/products' routerLinkActive='active' class="nav-link">Products</a></div>
     </nav>
@@ -18,7 +18,11 @@
 
    <router-outlet></router-outlet> <!-- создать страницу, на которой выводится один продукт и кнопка "Редактировать(Edit)"
                                         Сделать форму для редактирования такую же как на странице addProduct
-                                        Найти картинки для продуктов идобавить их в папку src\assets\photos-->
+                                        Найти картинки для продуктов идобавить их в папку src\assets\photos
+
+
+                                        17.06.2021 Форма должна быть скрытая, дотого как мы нажмем кнопку "Edit"
+                                                   В форму должны вставиться поля продукта-->
 
 </main>
 

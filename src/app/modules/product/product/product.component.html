@@ -1,24 +1,24 @@
-<form [formGroup]="addProductForm">
+<h2>Edit product</h2>
+
+  <app-product-view [product]="product" [isEdit]="true" (onEdit)="editProduct($event)"></app-product-view>
+
+<form [formGroup]="editProductForm">
   <ul class="list-unstyled">
     <li>
       <label for="title" class="form-label">Title*</label>
       <input  id="title" formControlName="title"  type="text" placeholder="Title*" class="form-control">
-      <app-validate-messages [control]="addProductForm.controls.title"></app-validate-messages>
     </li>
     <li>
       <label for="description" class="form-label">Description*</label>
       <input id="description" formControlName="description" type="text" placeholder="Description*" class="form-control">
-      <app-validate-messages [control]="addProductForm.controls.description"></app-validate-messages>
     </li>
     <li>
       <label for="price" class="form-label">Price*</label>
       <input id="price" formControlName="price" type="number" placeholder="Price*" class="form-control">
-      <app-validate-messages [control]="addProductForm.controls.price"></app-validate-messages>
     </li>
     <li>
       <label for="qty" class="form-label">Qty*</label>
       <input id="qty" formControlName="qty" type="number" placeholder="Qty*" class="form-control">
-      <app-validate-messages [control]="addProductForm.controls.qty"></app-validate-messages>
     </li>
     <li>
       <label for="image" class="form-label">Image</label>
@@ -35,9 +35,4 @@
       </select>
     </li>
   </ul>
-  <button (click)="addProduct()" type="button" class="btn btn-success">Add</button>
 </form>
-<!-- Pipe добавляет значек к валюте по коду валюты (USD/EUR...) -->
-<!-- <div *ngFor="let currency of currencies">
-  {{10|currency:currency.code}}
-</div> -->

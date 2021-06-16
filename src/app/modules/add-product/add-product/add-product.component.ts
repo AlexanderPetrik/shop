@@ -22,8 +22,6 @@ export class AddProductComponent implements OnInit {
     this.initAddProductForm();
   }
 
-  // Сделать проверку перед сохранение, что форма валидна и сохранить если валидна иначе показать все ошибки.
-
   addProduct() {
     if(this.addProductForm.invalid) {
       Object.values(this.addProductForm.controls).forEach(control => control.markAsTouched());
@@ -37,6 +35,7 @@ export class AddProductComponent implements OnInit {
 
   initAddProductForm() {
     this.addProductForm = this.fb.group({
+      image: '',
       title: ['', [Validators.required, (control: FormControl) => control.value === 'x' ? {isX: true} : null]],
       description: ['', Validators.required],
       price: [null, [Validators.required, Validators.min(0)]],
